@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Landing Page - Professional Services</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <meta name="description" content="Professional business landing page with modern design and conversion-focused layout" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(248, 250, 252, 1) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .redirect-container {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 2rem;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #2563EB;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        h1 {
+            color: #1E293B;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            color: #64748B;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #E2E8F0;
+            border-top: 3px solid #2563EB;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .redirect-info {
+            font-size: 0.9rem;
+            color: #94A3B8;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 640px) {
+            .redirect-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fempowercl1368back.builtwithrocket.new&_v=0.1.2"></script>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="logo">B</div>
+        <h1>Welcome to Our Business</h1>
+        <p>Redirecting you to our professional landing page...</p>
+        <div class="loading-spinner"></div>
+        <div class="redirect-info">
+            You will be automatically redirected in <span id="countdown">3</span> seconds
+        </div>
+    </div>
+
+    <script>
+        // Available pages
+        const pages = [
+            'homepage_landing.html',
+            'services_overview.html', 
+            'about_company.html',
+            'portfolio_showcase.html',
+            'contact_consultation.html'
+        ];
+        
+        // Default redirect to homepage
+        const defaultPage = 'homepage_landing.html';
+        
+        // Countdown timer
+        let countdown = 3;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                // Redirect to the homepage
+                window.location.href = `pages/${defaultPage}`;
+            }
+        }, 1000);
+        
+        // Allow immediate redirect on click
+        document.addEventListener('click', () => {
+            clearInterval(timer);
+            window.location.href = `pages/${defaultPage}`;
+        });
+        
+        // Preload the target page for faster navigation
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = `pages/${defaultPage}`;
+        document.head.appendChild(link);
+    </script>
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+</html>

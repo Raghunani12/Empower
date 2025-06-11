@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Showcase - Empower</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fempowercl1368back.builtwithrocket.new&_v=0.1.2"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                        <path d="M14 16l-3-3 1.41-1.41L14 13.17l5.59-5.58L21 9l-7 7z" fill="white"/>
+                    </svg>
+                    <span class="text-xl font-bold text-text-primary">Empower</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_landing.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
+                    <a href="services_overview.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Services</a>
+                    <a href="about_company.html" class="text-text-secondary hover:text-primary transition-colors duration-200">About</a>
+                    <a href="portfolio_showcase.html" class="text-text-primary hover:text-primary transition-colors duration-200 font-medium">Portfolio</a>
+                    <a href="contact_consultation.html" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-secondary-100 transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-border">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="homepage_landing.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
+                    <a href="services_overview.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Services</a>
+                    <a href="about_company.html" class="text-text-secondary hover:text-primary transition-colors duration-200">About</a>
+                    <a href="portfolio_showcase.html" class="text-text-primary hover:text-primary transition-colors duration-200 font-medium">Portfolio</a>
+                    <a href="contact_consultation.html" class="btn-primary w-full text-center">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Section -->
+    <section class="pt-24 pb-8 bg-surface">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center space-x-2 text-sm text-text-secondary mb-4">
+                <a href="homepage_landing.html" class="hover:text-primary transition-colors duration-200">Homepage</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                <span class="text-text-primary font-medium">Portfolio</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-surface">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-fluid-4xl font-bold text-text-primary mb-6">
+                    Our Portfolio
+                </h1>
+                <p class="text-fluid-lg text-text-secondary mb-8">
+                    Discover how we've helped businesses transform their operations and achieve remarkable growth through innovative solutions and strategic consulting.
+                </p>
+                
+                <!-- Search Bar -->
+                <div class="max-w-md mx-auto mb-8">
+                    <div class="relative">
+                        <input type="text" id="portfolio-search" placeholder="Search projects..." class="form-input pl-12 pr-4" />
+                        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-background border-b border-border">
+        <div class="container mx-auto px-4">
+            <!-- Desktop Filters -->
+            <div class="hidden md:flex items-center justify-center space-x-4 mb-8">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="startup">Startup Growth</button>
+                <button class="filter-btn" data-filter="consulting">Strategic Consulting</button>
+                <button class="filter-btn" data-filter="digital">Digital Solutions</button>
+                <button class="filter-btn" data-filter="analytics">Business Analytics</button>
+            </div>
+
+            <!-- Mobile Filter Button -->
+            <div class="md:hidden text-center mb-8">
+                <button id="mobile-filter-btn" class="btn-secondary">
+                    <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.707A1 1 0 013 7V4z"/>
+                    </svg>
+                    Filter Projects
+                </button>
+            </div>
+
+            <!-- Success Metrics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-2">150+</div>
+                    <div class="text-text-secondary">Projects Completed</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-2">98%</div>
+                    <div class="text-text-secondary">Client Satisfaction</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-2">$50M+</div>
+                    <div class="text-text-secondary">Revenue Generated</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-2">25+</div>
+                    <div class="text-text-secondary">Industries Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section class="py-20 bg-background">
+        <div class="container mx-auto px-4">
+            <!-- Loading State -->
+            <div id="loading-skeleton" class="hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card animate-pulse">
+                    <div class="h-64 bg-secondary-200 rounded-t-lg"></div>
+                    <div class="p-6">
+                        <div class="h-4 bg-secondary-200 rounded mb-4"></div>
+                        <div class="h-3 bg-secondary-200 rounded mb-2"></div>
+                        <div class="h-3 bg-secondary-200 rounded w-3/4"></div>
+                    </div>
+                </div>
+                <div class="card animate-pulse">
+                    <div class="h-64 bg-secondary-200 rounded-t-lg"></div>
+                    <div class="p-6">
+                        <div class="h-4 bg-secondary-200 rounded mb-4"></div>
+                        <div class="h-3 bg-secondary-200 rounded mb-2"></div>
+                        <div class="h-3 bg-secondary-200 rounded w-3/4"></div>
+                    </div>
+                </div>
+                <div class="card animate-pulse">
+                    <div class="h-64 bg-secondary-200 rounded-t-lg"></div>
+                    <div class="p-6">
+                        <div class="h-4 bg-secondary-200 rounded mb-4"></div>
+                        <div class="h-3 bg-secondary-200 rounded mb-2"></div>
+                        <div class="h-3 bg-secondary-200 rounded w-3/4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item card card-hover overflow-hidden group cursor-pointer" data-category="ecommerce" data-modal="modal-1">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="E-commerce transformation project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">E-commerce</span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">RetailMax Digital Transformation</h3>
+                                <p class="text-sm mb-4">300% increase in online sales</p>
+                                <div class="bg-white text-primary px-4 py-2 rounded-md font-medium">View Case Study</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary">RetailMax Digital Transformation</h3>
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </div>
+                        <p class="text-text-secondary mb-4">Complete e-commerce platform overhaul with modern UX design and advanced analytics integration.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-primary font-medium">+300% Sales Growth</span>
+                            <span class="text-sm text-text-secondary">6 months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item card card-hover overflow-hidden group cursor-pointer" data-category="startup" data-modal="modal-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Startup scaling project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2015/01/08/18/29/entrepreneur-593358_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">Startup Growth</span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">TechStart Scaling Strategy</h3>
+                                <p class="text-sm mb-4">10x team growth in 12 months</p>
+                                <div class="bg-white text-primary px-4 py-2 rounded-md font-medium">View Case Study</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary">TechStart Scaling Strategy</h3>
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </div>
+                        <p class="text-text-secondary mb-4">Strategic guidance for rapid scaling while maintaining operational efficiency and company culture.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-primary font-medium">10x Team Growth</span>
+                            <span class="text-sm text-text-secondary">12 months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item card card-hover overflow-hidden group cursor-pointer" data-category="consulting" data-modal="modal-3">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg" alt="Strategic consulting project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-medium">Strategic Consulting</span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">GlobalCorp Restructuring</h3>
+                                <p class="text-sm mb-4">40% efficiency improvement</p>
+                                <div class="bg-white text-primary px-4 py-2 rounded-md font-medium">View Case Study</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary">GlobalCorp Restructuring</h3>
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </div>
+                        <p class="text-text-secondary mb-4">Comprehensive organizational restructuring to improve efficiency and streamline operations.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-primary font-medium">+40% Efficiency</span>
+                            <span class="text-sm text-text-secondary">8 months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item card card-hover overflow-hidden group cursor-pointer" data-category="digital" data-modal="modal-4">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Digital solutions project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-secondary-600 text-white px-3 py-1 rounded-full text-sm font-medium">Digital Solutions</span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">FinTech Platform Development</h3>
+                                <p class="text-sm mb-4">50% faster processing time</p>
+                                <div class="bg-white text-primary px-4 py-2 rounded-md font-medium">View Case Study</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary">FinTech Platform Development</h3>
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </div>
+                        <p class="text-text-secondary mb-4">Custom financial technology platform with advanced security features and real-time processing.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-primary font-medium">50% Faster Processing</span>
+                            <span class="text-sm text-text-secondary">10 months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item card card-hover overflow-hidden group cursor-pointer" data-category="analytics" data-modal="modal-5">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Business analytics project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-warning text-white px-3 py-1 rounded-full text-sm font-medium">Business Analytics</span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">DataDriven Analytics Suite</h3>
+                                <p class="text-sm mb-4">85% better decision accuracy</p>
+                                <div class="bg-white text-primary px-4 py-2 rounded-md font-medium">View Case Study</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary">DataDriven Analytics Suite</h3>
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </div>
+                        <p class="text-text-secondary mb-4">Advanced business intelligence platform with predictive analytics and real-time dashboards.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-primary font-medium">85% Better Decisions</span>
+                            <span class="text-sm text-text-secondary">4 months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item card card-hover overflow-hidden group cursor-pointer" data-category="ecommerce" data-modal="modal-6">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mobile commerce project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">E-commerce</span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <h3 class="text-xl font-semibold mb-2">MobileFirst Commerce</h3>
+                                <p class="text-sm mb-4">200% mobile conversion boost</p>
+                                <div class="bg-white text-primary px-4 py-2 rounded-md font-medium">View Case Study</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary">MobileFirst Commerce</h3>
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </div>
+                        <p class="text-text-secondary mb-4">Mobile-optimized e-commerce platform with progressive web app capabilities and offline support.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-primary font-medium">+200% Mobile Conversions</span>
+                            <span class="text-sm text-text-secondary">5 months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-16">
+                <svg class="w-16 h-16 text-secondary-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.009-5.824-2.562M15 6.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <h3 class="text-xl font-semibold text-text-primary mb-2">No projects found</h3>
+                <p class="text-text-secondary">Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="py-16 bg-surface">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-fluid-2xl font-bold text-text-primary mb-4">
+                    Trusted by Industry Leaders
+                </h2>
+                <p class="text-text-secondary">
+                    We've partnered with companies across various industries to deliver exceptional results
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+                <!-- Client Logo Placeholders -->
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-sm border border-border">
+                    <span class="text-secondary-400 font-semibold">TechCorp</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-sm border border-border">
+                    <span class="text-secondary-400 font-semibold">RetailMax</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-sm border border-border">
+                    <span class="text-secondary-400 font-semibold">FinanceHub</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-sm border border-border">
+                    <span class="text-secondary-400 font-semibold">StartupLab</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-sm border border-border">
+                    <span class="text-secondary-400 font-semibold">GlobalCorp</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-sm border border-border">
+                    <span class="text-secondary-400 font-semibold">InnovateCo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+                <defs>
+                    <pattern id="cta-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#cta-pattern)"/>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-fluid-3xl font-bold mb-6">
+                    Ready to Start Your Project?
+                </h2>
+                <p class="text-fluid-lg mb-8 opacity-90">
+                    Let's discuss how we can help you achieve similar results. Our team is ready to transform your business vision into reality.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact_consultation.html" class="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-gray-100 transition-colors duration-200">
+                        Start Your Project
+                    </a>
+                    <button id="request-similar-btn" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:text-primary transition-colors duration-200">
+                        Request Similar Solution
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-700 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <svg class="w-8 h-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <path d="M14 16l-3-3 1.41-1.41L14 13.17l5.59-5.58L21 9l-7 7z" fill="white"/>
+                        </svg>
+                        <span class="text-xl font-bold">Empower</span>
+                    </div>
+                    <p class="text-secondary-300 mb-6">
+                        Transforming businesses through innovative solutions and strategic consulting.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-secondary-300 hover:text-white transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-300 hover:text-white transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-300 hover:text-white transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-12.013C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="homepage_landing.html" class="text-secondary-300 hover:text-white transition-colors duration-200">Home</a></li>
+                        <li><a href="about_company.html" class="text-secondary-300 hover:text-white transition-colors duration-200">About Us</a></li>
+                        <li><a href="services_overview.html" class="text-secondary-300 hover:text-white transition-colors duration-200">Services</a></li>
+                        <li><a href="portfolio_showcase.html" class="text-secondary-300 hover:text-white transition-colors duration-200">Portfolio</a></li>
+                        <li><a href="contact_consultation.html" class="text-secondary-300 hover:text-white transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services_overview.html" class="text-secondary-300 hover:text-white transition-colors duration-200">Strategic Consulting</a></li>
+                        <li><a href="services_overview.html" class="text-secondary-300 hover:text-white transition-colors duration-200">Digital Solutions</a></li>
+                        <li><a href="services_overview.html" class="text-secondary-300 hover:text-white transition-colors duration-200">Growth Acceleration</a></li>
+                        <li><a href="services_overview.html" class="text-secondary-300 hover:text-white transition-colors duration-200">Business Analytics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-secondary-300">123 Business Ave, Suite 100<br />New York, NY 10001</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span class="text-secondary-300">+1 (555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <span class="text-secondary-300">hello@empower.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-secondary-600 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-secondary-300 text-sm">
+                        © 2025 Empower. All Rights Reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-secondary-300 hover:text-white text-sm transition-colors duration-200">Privacy Policy</a>
+                        <a href="#" class="text-secondary-300 hover:text-white text-sm transition-colors duration-200">Terms of Service</a>
+                        <a href="#" class="text-secondary-300 hover:text-white text-sm transition-colors duration-200">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Filter Panel -->
+    <div id="mobile-filter-panel" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50" id="filter-overlay"></div>
+        <div class="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6 transform translate-y-full transition-transform duration-300" id="filter-content">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-lg font-semibold text-text-primary">Filter Projects</h3>
+                <button id="close-filter-btn" class="p-2 hover:bg-secondary-100 rounded-md transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <button class="mobile-filter-btn active" data-filter="all">All Projects</button>
+                <button class="mobile-filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="mobile-filter-btn" data-filter="startup">Startup Growth</button>
+                <button class="mobile-filter-btn" data-filter="consulting">Strategic Consulting</button>
+                <button class="mobile-filter-btn" data-filter="digital">Digital Solutions</button>
+                <button class="mobile-filter-btn" data-filter="analytics">Business Analytics</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study Modals -->
+    <!-- Modal 1 -->
+    <div id="modal-1" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-75" onclick="closeModal('modal-1')"></div>
+        <div class="absolute inset-4 md:inset-8 bg-white rounded-lg overflow-hidden">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between p-6 border-b border-border">
+                    <h2 class="text-2xl font-bold text-text-primary">RetailMax Digital Transformation</h2>
+                    <button onclick="closeModal('modal-1')" class="p-2 hover:bg-secondary-100 rounded-md transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 overflow-y-auto p-6">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="RetailMax project showcase" class="w-full h-64 object-cover rounded-lg" loading="lazy" />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-text-primary mb-4">Project Overview</h3>
+                            <p class="text-text-secondary mb-6">
+                                RetailMax, a traditional brick-and-mortar retailer, needed to rapidly expand their digital presence to compete in the evolving marketplace. We implemented a comprehensive e-commerce transformation strategy.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="text-center p-4 bg-surface rounded-lg">
+                                    <div class="text-2xl font-bold text-primary">300%</div>
+                                    <div class="text-sm text-text-secondary">Sales Increase</div>
+                                </div>
+                                <div class="text-center p-4 bg-surface rounded-lg">
+                                    <div class="text-2xl font-bold text-primary">6</div>
+                                    <div class="text-sm text-text-secondary">Months Timeline</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-text-primary mb-4">Challenge</h3>
+                        <p class="text-text-secondary mb-6">
+                            RetailMax faced declining foot traffic and needed to establish a strong online presence quickly. Their existing website was outdated and couldn't handle the volume of traffic they needed to generate.
+                        </p>
+                        <h3 class="text-xl font-semibold text-text-primary mb-4">Solution</h3>
+                        <p class="text-text-secondary mb-6">
+                            We developed a modern, scalable e-commerce platform with advanced analytics, personalized shopping experiences, and integrated inventory management. The solution included mobile optimization and social commerce integration.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="contact_consultation.html" class="btn-primary text-center">Start Similar Project</a>
+                            <button onclick="requestSimilarSolution('RetailMax Digital Transformation')" class="btn-secondary text-center">Request Similar Solution</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional modals would follow the same pattern for modal-2 through modal-6 -->
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Filter functionality
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const mobileFilterBtns = document.querySelectorAll('.mobile-filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            const noResults = document.getElementById('no-results');
+
+            function filterProjects(category) {
+                let visibleCount = 0;
+                
+                portfolioItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.classList.remove('hidden');
+                } else {
+                    noResults.classList.add('hidden');
+                }
+            }
+
+            // Desktop filter buttons
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterProjects(this.dataset.filter);
+                });
+            });
+
+            // Mobile filter buttons
+            mobileFilterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    mobileFilterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    filterProjects(this.dataset.filter);
+                    closeMobileFilter();
+                });
+            });
+
+            // Mobile filter panel
+            const mobileFilterBtn = document.getElementById('mobile-filter-btn');
+            const mobileFilterPanel = document.getElementById('mobile-filter-panel');
+            const filterContent = document.getElementById('filter-content');
+            const closeFilterBtn = document.getElementById('close-filter-btn');
+            const filterOverlay = document.getElementById('filter-overlay');
+
+            function openMobileFilter() {
+                mobileFilterPanel.classList.remove('hidden');
+                setTimeout(() => {
+                    filterContent.style.transform = 'translateY(0)';
+                }, 10);
+            }
+
+            function closeMobileFilter() {
+                filterContent.style.transform = 'translateY(100%)';
+                setTimeout(() => {
+                    mobileFilterPanel.classList.add('hidden');
+                }, 300);
+            }
+
+            mobileFilterBtn.addEventListener('click', openMobileFilter);
+            closeFilterBtn.addEventListener('click', closeMobileFilter);
+            filterOverlay.addEventListener('click', closeMobileFilter);
+
+            // Search functionality
+            const searchInput = document.getElementById('portfolio-search');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                let visibleCount = 0;
+
+                portfolioItems.forEach(item => {
+                    const title = item.querySelector('h3').textContent.toLowerCase();
+                    const description = item.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0 && searchTerm !== '') {
+                    noResults.classList.remove('hidden');
+                } else {
+                    noResults.classList.add('hidden');
+                }
+            });
+
+            // Modal functionality
+            portfolioItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const modalId = this.dataset.modal;
+                    if (modalId) {
+                        openModal(modalId);
+                    }
+                });
+            });
+
+            // Request similar solution functionality
+            const requestSimilarBtn = document.getElementById('request-similar-btn');
+            requestSimilarBtn.addEventListener('click', function() {
+                // Redirect to contact page with pre-filled information
+                window.location.href = 'contact_consultation.html?service=similar-solution';
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add scroll effect to header
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.classList.add('shadow-elevation-2');
+                } else {
+                    header.classList.remove('shadow-elevation-2');
+                }
+            });
+
+            // Animate elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards and sections
+            document.querySelectorAll('.card, section').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function requestSimilarSolution(projectName) {
+            // Redirect to contact page with pre-filled project information
+            window.location.href = `contact_consultation.html?project=${encodeURIComponent(projectName)}`;
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const openModals = document.querySelectorAll('[id^="modal-"]:not(.hidden)');
+                openModals.forEach(modal => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+    </script>
+
+    <style>
+        .filter-btn {
+            @apply px-6 py-2 rounded-full border border-border text-text-secondary hover:text-primary hover:border-primary transition-all duration-200;
+        }
+        
+        .filter-btn.active {
+            @apply bg-primary text-white border-primary;
+        }
+        
+        .mobile-filter-btn {
+            @apply px-4 py-3 rounded-lg border border-border text-text-secondary hover:text-primary hover:border-primary transition-all duration-200 text-center;
+        }
+        
+        .mobile-filter-btn.active {
+            @apply bg-primary text-white border-primary;
+        }
+        
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
