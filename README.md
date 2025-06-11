@@ -76,4 +76,4 @@ The app is built with responsive design using Tailwind CSS breakpoints:
 
 ## 🙏 Acknowledgments
 
-- built by AmigoeZ
+- built under @AmigoeZ IT Services
